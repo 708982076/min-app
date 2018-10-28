@@ -17,40 +17,61 @@ export default class cSlider extends Component {
   };
 
   state = {
+    startX: 0,
     moveX: 0,
-    moveY: 0
+    index: 1
   }
 
   touchStart = (e) => {
-    let moveX = e.changedTouches[0].clientX
-    this.setState({ moveX })
+    let startX = e.changedTouches[0].clientX
+    this.setState({ startX })
+  }
+
+  touchEnd = (e) => {
+    //设置缓冲动作
+    //index++/--
   }
 
   touchMove = (e) => {
-    let moveX = e.changedTouches[0].clientX
-    // if ( this.state.moveX >= moveX ) {
-    //   console.log('左')
-    // }else {
-    //   console.log('右')
-    // }
-    const div = document.createElement('span')
-    if ( Math.abs(moveX - this.state.moveX) >= 25) {
-      this.setState({ moveX })
-      div.innerHTML = '快'
-      document.body.appendChild(div)
-    }else {
-      this.setState({ moveX })
-      div.innerHTML = '慢'
-      document.body.appendChild(div)
+    let clientX = e.changedTouches[0].clientX,
+        moveX =  clientX - this.state.startX
+    this.setState({moveX})
+  }
+
+  bodyMove = () => {
+    if (this.state.moveX < 0) {
+      //向左滑
+      // index、index + 1
+      // 如果index=max、index、min index
+      // index.body.translate --
+    }else if (this.state.moveX > 0) {
+      //向左滑
+      // index、index - 1  
+      // 如果index = 0， index、max index
+      // index.body.translate ++
     }
   }
 
   render() {
+    const styleOpstions = (index) => {
+      let moveVal = this.state.moveX 
+      if (moveVal < 0 && index === this.state.index) {
+        moveVal += 375
+      }else if (moveVal > 0 && index === this.state.index + 1) {
+        moveVal -= 375
+      }else {
+        moveVal = -375
+      }
+      return {
+        transform: `translate(${moveVal}px, 0) translateZ(0)`,
+        zIndex: 99 - index
+      }
+    }
     const children = this.props.children.map((node, index) => {
-      return (
+      return ( 
         <div 
           key={index} 
-          data-index={index}
+          style={styleOpstions(index)}
         >
           {node.props.children}
         </div>
@@ -61,6 +82,7 @@ export default class cSlider extends Component {
         className={`cSlite ${this.props.className}`} 
         onTouchStart={this.touchStart}
         onTouchMove={this.touchMove}
+        onTouchEnd={this.touchEnd}
       >
         <div className="cSlite__show">
           {children}
