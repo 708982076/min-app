@@ -18,13 +18,22 @@ export default class Home extends Component {
         <TopBar/>
         <CSlider {...sliderOptions}>
           <div>
-            <img src="" alt=""/>
+            <img src={"/source/img/1.jpg"} alt=""/>
           </div>
           <div>
-            <img src="" alt=""/>
+            <img src={"/source/img/2.jpg"} alt=""/>
           </div>
           <div>
-            <img src="" alt=""/>
+            <img src={"/source/img/3.jpg"} alt=""/>
+          </div>
+          <div>
+            <img src={"/source/img/4.jpg"} alt=""/>
+          </div>
+          <div>
+            <img src={"/source/img/5.jpg"} alt=""/>
+          </div>
+          <div>
+            <img src={"/source/img/6.jpg"} alt=""/>
           </div>
         </CSlider>
       </div>
