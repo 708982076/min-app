@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TopBar from './TopBar/TopBar'
 import CSlider from './cSlider/cSlider'
+import MovieItem from './MovieItem/MovieItem'
 import './Home.scss'
 
 export default class Home extends Component {
@@ -36,6 +37,14 @@ export default class Home extends Component {
             <img src={"/source/img/6.jpg"} alt=""/>
           </div>
         </CSlider>
+        <ul className="movieList">
+          <li><MovieItem/></li>
+          <li><MovieItem/></li>
+          <li><MovieItem/></li>
+          <li><MovieItem/></li>
+          <li><MovieItem/></li>
+          <li><MovieItem/></li>
+        </ul>
       </div>
     )
   }

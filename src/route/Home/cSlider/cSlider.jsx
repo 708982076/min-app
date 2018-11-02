@@ -28,13 +28,13 @@ export default class cSlider extends Component {
   bodyDom = []
 
   componentDidMount = () => {
-    this.timer = setInterval(() => {
-      this.setState((prevState) => {
-        return {
-          index: prevState.index === this.props.children.length - 1 ? 0 : prevState.index + 1
-        }
-      })
-    }, 1000)   
+    // this.timer = setInterval(() => {
+    //   this.setState((prevState) => {
+    //     return {
+    //       index: prevState.index === this.props.children.length - 1 ? 0 : prevState.index + 1
+    //     }
+    //   })
+    // }, 1000)   
 
     this.setState({ parentWidth: this.parent.offsetWidth })
   }
@@ -184,7 +184,6 @@ export default class cSlider extends Component {
         transform: `translate(${this.state.moveX - parentWidth}px, 0) translateZ(0)`
       }
     }
-
     return {
       transform: `translate(${-parentWidth}px, 0) translateZ(0)`
     }

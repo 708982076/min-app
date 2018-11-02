@@ -1,0 +1,10 @@
+.movieList{
+  margin: 0;
+  padding: 0;
+  li {
+    &:nth-child(n + 2) .moveItem{
+      border-top: 1px solid #dfdfdf;
+    }
+    list-style: none;
+  }
+}
