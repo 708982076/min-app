@@ -1,0 +1,109 @@
+@import '../../mixin.scss';
+
+.cityLayer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+
+  &__topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+  }
+
+  &__close {
+    position: absolute;
+    margin-left: 20px; 
+    font-size: 14px;
+    line-height: 35px;
+    font-weight: 600;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  &__content {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+  }
+  &__tag {
+    background-color: #fdfddf;
+  }
+  &__tagName {
+    margin: 0;
+    line-height: 23px;
+    font-size: 12px;
+    font-weight: normal;
+    color: $gray;
+    margin-left: 12px;
+  }
+  &__TagList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 5px 20px;
+    list-style: none;
+    li {
+      width: 100px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #e2dec9;
+      &:nth-of-type(n + 4) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__letter {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: rgb(218, 218, 218);
+  }
+  &__cityList {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+    li {
+      line-height: 25px;
+    }
+  }
+
+  &__index {
+    position: absolute;
+    right: 2px;
+    top: 56px;
+  }
+  &__abc {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      text-align: center;
+      a{
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 16px;
+        cursor: none;
+        color: blue;
+      }
+    }
+  }
+}

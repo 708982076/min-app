@@ -4,6 +4,7 @@ import CSlider from './components/cSlider/cSlider'
 import MovieItem from './components/MovieItem/MovieItem'
 import TabBar from '../TabBar/TabBar'
 import ComponentToBody from '../ComponentToBody'
+import CityLayer from '../CityLayer'
 import './index.scss'
 
 export default class Home extends Component {
@@ -49,7 +50,7 @@ export default class Home extends Component {
         </ul>
         <TabBar current="movie"/>
         <ComponentToBody>
-          <div>123</div>
+          <CityLayer/>
         </ComponentToBody>
       </div>
     )
