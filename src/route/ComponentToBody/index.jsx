@@ -11,7 +11,18 @@ export default class ComponentToBody extends React.Component {
     document.body.appendChild(this.tag)
   };
   componentDidMount = () => {
-    console.log(ReactDOM)
+    ReactDOM.render(
+      this.props.children, 
+      this.tag
+    )
+  }
+  componentWillUnmount = () => {
+    if (!this.tag) {
+      return 
+    }
+    ReactDOM.unmountComponentAtNode(this.tag)
+    document.removeChild(this.tag)
+    this.tag = null
   }
   render() {
     return null

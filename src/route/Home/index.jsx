@@ -48,7 +48,9 @@ export default class Home extends Component {
           <li><MovieItem/></li>
         </ul>
         <TabBar current="movie"/>
-        <ComponentToBody> <div></div> </ComponentToBody>
+        <ComponentToBody>
+          <div>123</div>
+        </ComponentToBody>
       </div>
     )
   }
