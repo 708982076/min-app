@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {BrowserRouter, Route} from 'react-router-dom'
-import Home from './route/Home/Home'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './route/Home'
 
 export default class App extends Component {
   render() {

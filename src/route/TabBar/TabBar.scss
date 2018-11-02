@@ -1,0 +1,37 @@
+@import '../../mixin.scss';
+
+.TabBar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3px 0;
+  background-color: #fff; 
+  border-top: 1px solid #000;
+  &__item {
+    flex: 1;
+    @include flex_center;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: none;
+    color: #000;
+  }
+  &__icon {
+    width: 22px;
+    height: 22px;
+    background-color: #000; 
+  }
+  &__title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__active {
+    .TabBar__icon {
+      background-color: red; 
+    }
+    .TabBar__title {  
+      color: red;
+    }
+  }
+}

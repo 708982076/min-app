@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import TopBar from './TopBar/TopBar'
-import CSlider from './cSlider/cSlider'
-import MovieItem from './MovieItem/MovieItem'
-import './Home.scss'
+import TopBar from './components/TopBar/TopBar'
+import CSlider from './components/cSlider/cSlider'
+import MovieItem from './components/MovieItem/MovieItem'
+import TabBar from '../TabBar/TabBar'
+import ComponentToBody from '../ComponentToBody'
+import './index.scss'
 
 export default class Home extends Component {
   // static propTypes = {
@@ -45,6 +47,8 @@ export default class Home extends Component {
           <li><MovieItem/></li>
           <li><MovieItem/></li>
         </ul>
+        <TabBar current="movie"/>
+        <ComponentToBody> <div></div> </ComponentToBody>
       </div>
     )
   }
