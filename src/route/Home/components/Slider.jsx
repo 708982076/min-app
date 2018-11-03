@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './cSlider.scss'
+import './Slider.scss'
 
-export default class cSlider extends Component {
+export default class Slider extends Component {
   static propTypes = {
     autoPlay: PropTypes.bool, //是否自动播放
     intervalTime: PropTypes.number.isRequired, //滚动间隔时间

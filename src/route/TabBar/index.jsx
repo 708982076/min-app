@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './TabBar.scss'
+import './index.scss'
 
 export default function TabBar({current}) {
   return (

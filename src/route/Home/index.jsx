@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import TopBar from './components/TopBar/TopBar'
-import CSlider from './components/cSlider/cSlider'
-import MovieItem from './components/MovieItem/MovieItem'
-import TabBar from '../TabBar/TabBar'
+import TopBar from './components/TopBar'
+import Slider from './components/Slider'
+import MovieItem from './components/MovieItem'
+import TabBar from '../TabBar'
 import ComponentToBody from '../ComponentToBody'
 import CityLayer from '../CityLayer'
 import './index.scss'
@@ -20,26 +20,26 @@ export default class Home extends Component {
     return (
       <div className="home">
         <TopBar/>
-        <CSlider {...sliderOptions}>
+        <Slider {...sliderOptions}>
           <div>
-            <img src={"/source/img/1.jpg"} alt=""/>
+            <img src={"/source/image/asset1.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/img/2.jpg"} alt=""/>
+            <img src={"/source/image/asset2.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/img/3.jpg"} alt=""/>
+            <img src={"/source/image/asset3.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/img/4.jpg"} alt=""/>
+            <img src={"/source/image/asset4.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/img/5.jpg"} alt=""/>
+            <img src={"/source/image/asset5.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/img/6.jpg"} alt=""/>
+            <img src={"/source/image/asset6.jpeg"} alt=""/>
           </div>
-        </CSlider>
+        </Slider>
         <ul className="movieList">
           <li><MovieItem/></li>
           <li><MovieItem/></li>
