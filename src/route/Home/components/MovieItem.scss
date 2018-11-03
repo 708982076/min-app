@@ -20,6 +20,7 @@
 
   &__btn {
     @include flex_center;
+    flex-direction: column;
     span {
       margin-top: 4px; 
       font-size: 12px;

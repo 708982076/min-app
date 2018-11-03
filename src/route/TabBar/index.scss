@@ -8,7 +8,7 @@
   width: 100%;
   padding: 3px 0;
   background-color: #fff; 
-  border-top: 1px solid #000;
+  border-top: 1px solid #ddd;
   &__item {
     flex: 1;
     @include flex_center;
@@ -20,18 +20,27 @@
   &__icon {
     width: 22px;
     height: 22px;
-    background-color: #000; 
+    background-size: 100% 100%; 
+    &.movie_icon {
+      background-image: url('/source/icons/movie.png');
+    }
+    &.user_icon {
+      background-image: url('/source/icons/user.png');
+    }
   }
   &__title {
     font-size: 12px;
     line-height: 16px;
   }
   &__active {
-    .TabBar__icon {
-      background-color: red; 
+    .movie_icon {
+      background-image: url('/source/icons/movie-solid.png');
     }
-    .TabBar__title {  
-      color: red;
+    .user_icon {
+      background-image: url('/source/icons/user-solid.png');
+    }
+    .TabBar__title {
+      color: #ff4c64;
     }
   }
 }

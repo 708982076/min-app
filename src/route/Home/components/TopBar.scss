@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   height: 35px;
-  padding: 0 10px;
+  padding: 0 18px;
   &__city{
     &::after{
       content: '';
@@ -18,7 +18,7 @@
     height: 26px;
     margin: 0 10px;
     border-radius: 20px;
-    background-color: #ccc;
+    background-color: #e7e7e7;
   }
   &__scan{
     width: 22px;

@@ -5,7 +5,7 @@ export default function MovieItem() {
   return (
     <div className="moveItem">
       <div className="moveItem__psd">
-        <img src="/source/img/1.jpg" alt=""/>
+        <img src="/source/movie/asset1.jpeg" alt=""/>
       </div>
       <div className="moveItem__details">
         <div className="moveItem__name">

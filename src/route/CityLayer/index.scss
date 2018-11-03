@@ -6,65 +6,69 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: rgba(255,255,255,1);
   z-index: 9999;
-
   &__topBar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 35px;
+    height: 45px;
+    border-bottom: 1px solid #e2e2e2;
     overflow: hidden;
   }
 
   &__close {
     position: absolute;
     margin-left: 20px; 
-    font-size: 14px;
-    line-height: 35px;
-    font-weight: 600;
+    font-size: 12px;
+    line-height: 45px;
   }
 
   &__title {
     margin: 0;
     text-align: center;
-    font-size: 16px;
-    line-height: 35px;
+    font-size: 18px;
+    line-height: 45px;
   }
   &__content {
     position: absolute;
-    top: 35px;
+    top: 46px;
     left: 0;
     bottom: 0;
     right: 0;
     overflow: auto;
   }
   &__tag {
-    background-color: #fdfddf;
+    padding-left: 15px;
+    background-color: #f5f5f5;
   }
   &__tagName {
     margin: 0;
+    padding: 10px 0;
     line-height: 23px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
-    color: $gray;
-    margin-left: 12px;
+    color: #9f9fa0;
   }
   &__TagList {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
-    padding: 5px 20px;
+    padding: 0;
+    padding-top: 6px;
+    padding-bottom: 9px; 
+    padding-right: 30px; 
     list-style: none;
     li {
-      width: 100px;
-      height: 28px;
-      line-height: 28px;
+      width: 105px;
+      height: 34px;
+      line-height: 34px;
       text-align: center;
       background-color: #fff;
-      border: 1px solid #e2dec9;
+      border: 1px solid #e6e6e6;
+      color: #999;
       &:nth-of-type(n + 4) {
         margin-top: 20px;
       }
@@ -72,17 +76,26 @@
   }
   &__letter {
     margin: 0;
-    padding-left: 20px;
-    font-size: 12px;
-    line-height: 24px;
-    background-color: rgb(218, 218, 218);
+    padding-left: 15px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: #f5f5f5;
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
   }
   &__cityList {
     margin: 0;
-    padding: 0 0 0 20px;
+    padding: 0;
+    padding-left: 15px;
     list-style: none;
     li {
-      line-height: 25px;
+      padding: 18px 0;
+      font-size: 14px;
+      color: #333;
+      &:nth-child(n + 2) {
+        border-top: 1px solid #e2e2e2;
+      }
     }
   }
 
@@ -96,13 +109,15 @@
     margin: 0;
     list-style: none;
     li {
-      text-align: center;
+      text-align: right;
       a{
+        display: inline-block;
+        width: 100%;
         text-decoration: none;
         font-size: 12px;
         line-height: 16px;
         cursor: none;
-        color: blue;
+        color: #6bbaf9;
       }
     }
   }

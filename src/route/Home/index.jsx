@@ -22,22 +22,22 @@ export default class Home extends Component {
         <TopBar/>
         <Slider {...sliderOptions}>
           <div>
-            <img src={"/source/image/asset1.jpeg"} alt=""/>
+            <img src={"/source/slide/slide1.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/image/asset2.jpeg"} alt=""/>
+            <img src={"/source/slide/slide2.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/image/asset3.jpeg"} alt=""/>
+            <img src={"/source/slide/slide3.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/image/asset4.jpeg"} alt=""/>
+            <img src={"/source/slide/slide4.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/image/asset5.jpeg"} alt=""/>
+            <img src={"/source/slide/slide5.jpeg"} alt=""/>
           </div>
           <div>
-            <img src={"/source/image/asset6.jpeg"} alt=""/>
+            <img src={"/source/slide/slide1.jpeg"} alt=""/>
           </div>
         </Slider>
         <ul className="movieList">
@@ -49,9 +49,9 @@ export default class Home extends Component {
           <li><MovieItem/></li>
         </ul>
         <TabBar current="movie"/>
-        <ComponentToBody>
+        {/* <ComponentToBody>
           <CityLayer/>
-        </ComponentToBody>
+        </ComponentToBody> */}
       </div>
     )
   }
