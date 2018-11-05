@@ -4,7 +4,7 @@ import './TopBar.scss'
 export default (props) => {
   return (
     <div className='TopBar'>
-      <div className='TopBar__city' onClick={props.toggleCityLayer}>
+      <div className='TopBar__city' onClick={props.openCityLayer}>
         {props.city}
       </div>
       <div className='TopBar__search'></div>

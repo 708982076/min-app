@@ -29,10 +29,24 @@ export default class Home extends Component {
     })
   }
 
-  toggleCityLayer = () => {
-    this.setState( (prveState) => ({
-      showCityLayer: !prveState.showCityLayer
-    }) )
+  openCityLayer = () => {
+    this.setState({
+      showCityLayer: true
+    })
+  }
+
+  closeCityLayer = () => {
+    this.setState({
+      showCityLayer: false
+    })
+  }
+
+  hideEvent = (city) => {
+    console.log(111)
+    this.setState({
+      city
+    })
+    this.closeCityLayer()
   }
 
   render() {
@@ -44,14 +58,14 @@ export default class Home extends Component {
     }
     return (
       <div className="home">
-        <TopBar city={city} toggleCityLayer={this.toggleCityLayer}/>
+        <TopBar city={city} openCityLayer={this.openCityLayer}/>
         <Slider {...sliderOptions} posters={posters}/>
         <MovieSlider movies={movies}></MovieSlider>
         <TabBar current="movie"/>
         { 
           showCityLayer && 
           <ComponentToBody>
-            <CityLayer toggleCityLayer={this.toggleCityLayer}/>
+            <CityLayer closeCityLayer={this.closeCityLayer} city={city} onHide={this.hideEvent}/>
           </ComponentToBody>
         }
       </div>
