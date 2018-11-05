@@ -38,7 +38,7 @@ export default class index extends Component {
         <div className="cityLayer__content">
           <div className="cityLayer__tag">
             <h2 className="cityLayer__tagName" id="定位">定位城市</h2>
-            <div className="cityLayer__currentCity" onClick={() => onHide(this.props.city)}>{this.props.city}</div>
+            <div className="cityLayer__currentCity" onClick={() => onHide('信阳')}>信阳</div>
           </div>
           <div className="cityLayer__tag">
             <h2 className="cityLayer__tagName" id="热门">热门城市</h2>
