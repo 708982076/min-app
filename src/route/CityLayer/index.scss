@@ -1,4 +1,6 @@
 @import '../../mixin.scss';
+$border: #e2e2e2;
+$topBg: #f5f5f5;
 
 .cityLayer {
   position: fixed;
@@ -6,15 +8,15 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255,255,255,1);
   z-index: 9999;
+  background-color: #fff;
   &__topBar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 45px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid $border;
     overflow: hidden;
   }
 
@@ -41,64 +43,68 @@
   }
   &__tag {
     padding-left: 15px;
-    background-color: #f5f5f5;
+    background-color: $topBg;
   }
   &__tagName {
     margin: 0;
-    padding: 10px 0;
+    padding-top: 10px;
     line-height: 23px;
     font-size: 14px;
     font-weight: normal;
     color: #9f9fa0;
   }
-  &__TagList {
+  .cityTagList {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    padding-top: 6px;
+    padding-top: 15px;
     padding-bottom: 9px; 
-    padding-right: 30px; 
     list-style: none;
-    li {
-      width: 105px;
+    &__col {
+      &:nth-of-type(n + 2) {
+        margin-left: 10px;
+      }
+    }
+    &__tag {
+      width: 100px;
       height: 34px;
       line-height: 34px;
       text-align: center;
       background-color: #fff;
       border: 1px solid #e6e6e6;
       color: #999;
-      &:nth-of-type(n + 4) {
-        margin-top: 20px;
+      &:nth-of-type(n + 2) {
+        margin-top: 10px;
       }
     }
   }
-  &__letter {
-    margin: 0;
-    padding-left: 15px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-    background-color: #f5f5f5;
-    border-top: 2px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
-  }
-  &__cityList {
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-    list-style: none;
-    li {
-      padding: 18px 0;
+  .cityList {
+    &__letter {
+      margin: 0;
+      padding-left: 15px;
+      height: 30px;
       font-size: 14px;
-      color: #333;
-      &:nth-child(n + 2) {
-        border-top: 1px solid #e2e2e2;
+      line-height: 30px;
+      background-color: $topBg;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
+    &__cityNameList {
+      margin: 0;
+      padding: 0;
+      padding-left: 15px;
+      list-style: none;
+      li {
+        padding: 18px 0;
+        font-size: 14px;
+        color: #333;
+        &:nth-child(n + 2) {
+          border-top: 1px solid $border;
+        }
       }
     }
   }
-
   &__index {
     position: absolute;
     right: 2px;

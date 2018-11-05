@@ -1,0 +1,92 @@
+{
+  "msg": 1,
+  "data": {
+    "city": "信阳",
+    "posters": [
+      {
+        "id": 1,
+        "image": "/source/movie/asset1.jpeg"
+      },
+      {
+        "id": 2,
+        "image": "/source/movie/asset2.jpeg"
+      },
+      {
+        "id": 3,
+        "image": "/source/movie/asset3.jpeg"
+      },
+      {
+        "id": 4,
+        "image": "/source/movie/asset4.jpeg"
+      },
+      {
+        "id": 5,
+        "image": "/source/movie/asset5.jpeg"
+      },
+      {
+        "id": 6,
+        "image": "/source/movie/asset6.jpeg"
+      },
+      {
+        "id": 7,
+        "image": "/source/movie/asset7.jpeg"
+      }
+    ],
+    "movies": [
+      {
+        "id": 1,
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537214991.webp",
+        "name": "胡桃夹子和四个王国 The Nutcracker And The Four Realms",
+        "score": 6.1,
+        "director": "拉斯·霍尔斯道姆",
+        "starring": "麦肯吉·弗依",
+        "tags": ["冒险 视觉盛宴"]
+      },
+      {
+        "id": 2,
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537133715.webp",
+        "name": "冰封侠：时空行者",
+        "score": 2.6,
+        "director": "叶伟民",
+        "starring": "甄子丹",
+        "tags": ["香港 古装 烂片"]
+      },
+      {
+        "id": 3,
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533173724.webp",
+        "name": "昨日青空",
+        "score": 6.1,
+        "director": "奚超",
+        "starring": "慧明",
+        "tags": ["爱情 二次元 2018"]
+      },
+      {
+        "id": 4,
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537693782.webp",
+        "name": "飓风奇劫",
+        "score": 5.5,
+        "director": "罗伯·科恩",
+        "starring": "卡洛斯·戴维斯",
+        "tags": ["飓风 惊悚 警匪"]
+      },
+      {
+        "id": 5,
+        "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537133715.webp",
+        "name": "铁血战士 The Predator",
+        "score": 5.1,
+        "director": "沙恩·布莱克",
+        "starring": "奥立薇娅·玛恩",
+        "tags": ["惊悚 暴力 恐怖"]
+      },
+      {
+        "id": 6,
+        "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2534471408.webp",
+        "name": "找到你",
+        "score": 7.4,
+        "director": "吕乐",
+        "starring": "王梓尘",
+        "tags": ["感人 中国大陆"]
+      }
+    ]
+  }
+}

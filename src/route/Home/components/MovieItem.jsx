@@ -1,28 +1,35 @@
 import React from 'react'
 import './MovieItem.scss'
 
-export default function MovieItem() {
+export default function MovieItem({movie}) {
   return (
     <div className="moveItem">
       <div className="moveItem__psd">
-        <img src="/source/movie/asset1.jpeg" alt=""/>
+        <img src={movie.poster} alt=""/>
       </div>
       <div className="moveItem__details">
         <div className="moveItem__name">
-          猫的传说
+          {movie.name}
         </div>
         <div className="moveItem__eval">
-          观众评分<span>9.3</span>
+          观众评分<span>{movie.score}</span>
         </div>
         <div className="moveItem__director">
-          导演：猫先生
+          导演：{movie.director}
         </div>
         <div className="moveItem__starring">
-          主演：还是猫先生
+          主演：{movie.starring}
         </div>
         <div className="moveItem__tag">
-          <div className="tTag tTag__red">今日最热</div>
-          <div className="tTag tTag__blue">今日最热</div>
+          {
+            movie.tags.length > 1 && 
+            movie.tags.split(' ').map((item, i) => {
+              if (i % 2) {
+                return <div className="tTag tTag__red" key={i}>{item}</div>
+              }
+              return <div className="tTag tTag__blue" key={i}>{item}</div>
+            })
+          }
         </div>
       </div>
       <div className="moveItem__btn">

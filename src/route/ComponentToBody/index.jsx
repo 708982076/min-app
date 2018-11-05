@@ -21,7 +21,7 @@ export default class ComponentToBody extends React.Component {
       return 
     }
     ReactDOM.unmountComponentAtNode(this.tag)
-    document.removeChild(this.tag)
+    document.body.removeChild(this.tag)
     this.tag = null
   }
   render() {
