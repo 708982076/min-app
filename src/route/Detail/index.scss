@@ -1,0 +1,19 @@
+.tTopBar {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  &__left {
+    width: 12px;
+    height: 20px;
+  }
+
+  &__middle {
+    flex: 1;
+  }
+
+  &__right {
+    width: 20px;
+    height: 20px;
+  }
+
+}

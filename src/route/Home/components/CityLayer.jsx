@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './index.scss'
-import { request } from '../../api'
+import './CityLayer.scss'
+import { request } from '../../../api'
 // import PropTypes from 'prop-types'
 
 export default class index extends Component {

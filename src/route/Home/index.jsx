@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import TopBar from './components/TopBar'
 import Slider from './components/Slider'
-import TabBar from '../TabBar'
+import TabBar from '../../common/TabBar'
 import MovieSlider from './components/MovieSlider'
-import ComponentToBody from '../ComponentToBody'
-import CityLayer from '../CityLayer'
+import ComponentToBody from '../../common/ComponentToBody'
+import CityLayer from './components/CityLayer'
 import { request } from '../../api'
 import './index.scss'
 
@@ -42,7 +42,6 @@ export default class Home extends Component {
   }
 
   hideEvent = (city) => {
-    console.log(111)
     this.setState({
       city
     })

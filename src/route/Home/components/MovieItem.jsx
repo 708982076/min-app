@@ -1,13 +1,14 @@
 import React from 'react'
 import './MovieItem.scss'
+import { Link } from 'react-router-dom' 
 
 export default function MovieItem({movie}) {
   return (
     <div className="moveItem">
-      <div className="moveItem__psd">
+      <Link className="moveItem__psd"  to={{ pathname: "/detail", search:`id=${movie.id}` }}>
         <img src={movie.poster} alt=""/>
-      </div>
-      <div className="moveItem__details">
+      </Link>
+      <Link className="moveItem__details"  to={{ pathname: "/detail", search:`id=${movie.id}` }}>
         <div className="moveItem__name">
           {movie.name}
         </div>
@@ -31,9 +32,9 @@ export default function MovieItem({movie}) {
             })
           }
         </div>
-      </div>
+      </Link>
       <div className="moveItem__btn">
-        <button className="tBtn">购票</button>
+        <Link className="tBtn"  to={{ pathname: "/detail", search:`id=${movie.id}` }}>购票</Link>
         <span>9.9元起</span>
       </div>
     </div>

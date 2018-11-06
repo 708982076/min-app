@@ -1,0 +1,102 @@
+@import '../../mixin.scss';
+
+.user {
+  &__topContent{
+    background-color: #333;
+    padding: 10px 15px;
+  }
+
+  .operation{
+    height: 20px;
+    &__opt {
+      width:20px;
+      height: 20px;
+      float: left;
+      background-image: url('/source/icons/setting.svg');
+      background-size: 100% 100%;
+    }
+    &__msg {
+      width:20px;
+      height: 20px;
+      float: right;
+      background-image: url('/source/icons/message.svg');
+      background-size: 100% 100%;      
+    }
+  }
+
+  &__infoContent {
+    display: flex;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }  
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    margin-left: 12px;
+    flex: 1;
+    color: #fff;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  } 
+
+  &__hot {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  &__follow {
+    padding-right: 17px;
+    border-right: 1px solid #fff;
+  }
+
+  &__fans {
+    padding-left: 10px;
+  }
+
+  &__identity {
+    display: inline-block;
+    padding: 5px;
+    font-size: 10px;
+    margin-top: 8px;
+    background-color: #3b44a8;
+  }
+
+  &__hobbyContend {
+    padding: 0 15px;
+  }
+  &__hobbyList {
+    height: 60px;
+    line-height: 60px;
+    &:nth-of-type(n + 2) {
+      border-top: 1px solid #e4e4e4;
+    }
+  }
+  &__hobbyName {
+    float: left;
+  }
+  &__number {
+    float: right;
+    font-size: 12px;
+    color: #999;
+    .arrows {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-image: url('/source/icons/arrow-r.svg');
+      background-size: 100% 100%;
+    }
+  }
+}
