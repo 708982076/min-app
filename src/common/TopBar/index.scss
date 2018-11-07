@@ -1,0 +1,43 @@
+.tTopBar {
+  display: flex;
+  height: 45px;
+  padding: 0 15px;
+  align-items: center;
+  &__left {
+    width: 12px;
+    height: 20px;
+    padding: 10px;
+    background-image: url('/source/icons/back.svg');
+    background-size: 17px 20px;
+    background-origin: content-box;
+    background-position: -3px 0px;
+    background-repeat: no-repeat;
+  }
+
+  &__middle {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__right {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-image: url('/source/icons/share.svg');
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__black {
+    .tTopBar__left {
+      background-image: url('/source/icons/back-black.svg');
+    }
+  
+    .tTopBar__right {
+      background-image: url('/source/icons/share-black.svg');
+    }
+  }
+}
+

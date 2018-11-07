@@ -1,11 +1,12 @@
 import React from 'react'
+import './index.scss'
 
-export default ({left, right, middle}) => {
+export default ({color, children}) => {
   return (
-    <div className="tTopBar">
+    <div className={'tTopBar ' + (color==='black' ? 'tTopBar__black' : '')}>
       <div className="tTopBar__left"></div>
       <div className="tTopBar__middle">
-        { middle }
+        { children }
       </div>
       <div className="tTopBar__right"></div>
     </div>
