@@ -1,0 +1,36 @@
+.evaluateBar {
+  $gray:#999;
+  height: 88px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-score {
+    text-align: left;
+  }
+
+  &-finer {
+    text-align: center;
+  }
+
+  &-see {
+    text-align: right;
+  }
+
+  &-num,
+  &-per,
+  &-wantPerson{
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &-scoreTitle,
+  &-perTitle,
+  &-seeTitle{
+    margin-top: 6px;
+    font-size: 8px;
+    color: $gray;
+  }
+}

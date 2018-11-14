@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import MovieItem from './MovieItem'
-import { request } from '../../../api'
 import "./MovieSlider.scss"
 
 

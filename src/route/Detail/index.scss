@@ -1,5 +1,10 @@
 $white: #efd3d3;
 
+@mixin detail-title {
+  padding: 18px 0;
+  font-size: 14px;
+}
+
 .detail {
   &__header {
     position: relative;
@@ -7,67 +12,50 @@ $white: #efd3d3;
     background: #cc7073;
     overflow: hidden;
   }
+  &__button {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 14px;
 
-  .movieInfo {
-    padding-left: 20px;
-    padding-top: 15px;
-    &__name {
-      font-weight: 600;
-      font-size: 18px;
-      color: #fff;
-    }
-
-    &__subName {
-      color: #efd3d3;
-      margin-top: 9px;
-      font-size: 14px;
-    }
-    
-    &__type {
-      font-size: 14px;
-      margin-top: 12px;
-      color: #efd3d3;
-    }
-
-    &__film {
-      font-size: 14px;
-      margin-top: 9px;
-      color: #efd3d3;
-    }
-
-    &__state {
+    &__star,
+    &__heart {
+      display: inline-block;
       margin-right: 5px;
+      width: 14px;
+      height: 14px;
+      background-size: 100% 100%;
+    } 
+
+    &__heart {
+      background-image: url('/source/icons/heart.svg'); 
     }
 
-    &__time {
-      margin-left: 5px;
-    }
-
-    &__releaseDate {
-      font-size: 14px;
-      margin-top: 9px;
-      color: #efd3d3;
+    &__star {
+      background-image: url('/source/icons/star.svg'); 
     }
   }
-
-  &__moviePoster {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    width: 103px;
-    height: 150px;
-    border-radius: 3px;
-    box-shadow: 0 0px 17px -1px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
+  .performer {
+    padding: 0 25px;
+    &-title {
+      @include detail-title;
     }
-  } 
-  &__evaluate {
-    padding-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-    display: flex;
+    &-shell {
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      li {
+        display: inline-block;
+        width: 80px;
+        height: 90px;
+        border: 1px solid #000;
+        &:nth-of-type(n + 2) {
+          margin-left: 6px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }  
+    }
   }
 }
