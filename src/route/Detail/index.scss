@@ -1,9 +1,5 @@
+@import './DetailMixin.scss';
 $white: #efd3d3;
-
-@mixin detail-title {
-  padding: 18px 0;
-  font-size: 14px;
-}
 
 .detail {
   &__header {

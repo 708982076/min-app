@@ -1,5 +1,19 @@
-@import '../detailMixin.scss';
+@import '../DetailMixin.scss';
 
 .comment{
-  
+  margin: 0 25px;
+
+  &-header {
+    clear: both;
+  } 
+
+  &-title {
+    @include detail-title;
+    float: left;
+  }
+
+  &-btn {
+    margin-top: 14px;
+    float: right;
+  }
 }
